@@ -10,11 +10,11 @@ logging($usage, 'require empty.php.');
 
 require_once('hoge.php');
 logging($usage, 'require hoge.php.');
-\hoge\getName().PHP_EOL;
+\hoge\getName();
 
 use hoge as piyo;
 logging($usage, 'set alias.');
-piyo\getName().PHP_EOL;
+piyo\getName();
 
 function logging(array &$usages, string $tag = ''): void {
     $usages['before'] = $usages['current'];
